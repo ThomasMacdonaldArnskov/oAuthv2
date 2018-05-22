@@ -25,7 +25,7 @@ app.use('/users', usersRouter);
 
 var client_id = '3ea5d876bdc44041b98959f967fe8b77'; // Your client id
 var client_secret = '8b14089063634bd8baacb3af44b5428f'; // Your secret
-var redirect_uri = 'http://localhost:3000/callback/'; // Your redirect uri
+var redirect_uri = 'http://oauth-v2-drf18.herokuapp.com/callback/'; // Your redirect uri
 
 var generateRandomString = function(length) {
     var text = '';
@@ -106,7 +106,7 @@ app.get('/callback', function(req, res) {
                 });
 
                 // we can also pass the token to the browser to make requests from there
-                res.redirect('http://localhost:3000/#' +
+                res.redirect('http://oauth-v2-drf18.herokuapp.com/#' +
                     querystring.stringify({
                         access_token: access_token,
                         refresh_token: refresh_token
