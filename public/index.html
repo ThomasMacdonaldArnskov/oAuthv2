@@ -16,11 +16,11 @@
   </style>
 </head>
 
-<body style="background: black;">
+<body>
 <br /><br /><br />
 <div class="container" style="margin: 0 auto; text-align: center">
   <div id="login">
-    <h1 style="color:white; font-size: 22px;">Get access via Spotify</h1><br />
+    <h1 style="font-size: 22px;">Get access via Spotify</h1><br />
     <a href="/login" class=""><img src="images/spotify.svg" style="width: 100px;" alt="Login to Spotify"></a>
   </div>
   <div id="loggedin">
@@ -58,11 +58,13 @@
     <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
     <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd>
   </dl>
+  <br /><br/>
   <form action="http://itu.dk/people/tarn/discover-rf18/" method="get">
     First name: <input type="hidden" name="&" value="{{access_token}}"><br>
     Last name: <input type="hidden" name="&" value="{{refresh_token}}"><br>
-    <button type="submit">Submit</button>
+    <button type="submit">Return to the app</button>
   </form>
+    <br /><br />
 </script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
